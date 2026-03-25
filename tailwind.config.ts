@@ -61,6 +61,7 @@ const config: Config = {
         'shimmer':       'shimmer 2.5s linear infinite',
         'bounce-gentle': 'bounceGentle 3s ease-in-out infinite',
         'wiggle':        'wiggle 1s ease-in-out infinite',
+        'logo-glow':     'logoGlow 2.5s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
@@ -114,6 +115,10 @@ const config: Config = {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-6deg)' },
           '50%':      { transform: 'rotate(6deg)' },
+        },
+        logoGlow: {
+          '0%':   { opacity: '0.3', transform: 'scale(0.95)' },
+          '100%': { opacity: '0.7', transform: 'scale(1.05)' },
         },
       },
     },

@@ -220,6 +220,18 @@
     );
   }
 
+  /* ── Navbar logo animated ring ─────────────────────────────── */
+  .logo-ring {
+    background: conic-gradient(
+      from 0deg,
+      #3b82f6,
+      #7c3aed,
+      #ec4899,
+      #06b6d4,
+      #3b82f6
+    );
+  }
+
   /* Admin sidebar link */
   .admin-link {
     @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium

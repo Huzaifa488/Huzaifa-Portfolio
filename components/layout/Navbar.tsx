@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Code2 } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { cn } from '@/lib/utils'
 
@@ -57,12 +57,39 @@ export function Navbar() {
       <nav className="section-container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-          >
-            <Code2 className="w-5 h-5 text-primary-600" />
-            <span>Huzaifa Nadeem</span>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            {/* Animated monogram badge */}
+            <div className="relative w-9 h-9 flex-shrink-0 group-hover:scale-110 transition-transform duration-300 ease-out">
+              {/* Spinning conic gradient ring */}
+              <div className="absolute inset-[-2px] rounded-[10px] animate-spin-slow logo-ring opacity-90 group-hover:opacity-100 transition-opacity" />
+              {/* Glow pulse layer */}
+              <div className="absolute inset-[-4px] rounded-[12px] animate-logo-glow opacity-40 group-hover:opacity-60 transition-opacity"
+                style={{ background: 'radial-gradient(ellipse at center, rgba(124,58,237,0.6) 0%, transparent 70%)' }}
+              />
+              {/* Badge body */}
+              <div
+                className="relative w-full h-full rounded-[8px] flex items-center justify-center z-10"
+                style={{ background: 'linear-gradient(140deg, #1e3a8a 0%, #4c1d95 60%, #1e1b4b 100%)' }}
+              >
+                {/* Subtle inner shimmer */}
+                <div className="absolute inset-0 rounded-[8px] opacity-20"
+                  style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 50%)' }}
+                />
+                <span className="relative font-mono font-bold text-[9px] text-white/95 tracking-tight leading-none select-none">
+                  &lt;HN/&gt;
+                </span>
+              </div>
+            </div>
+
+            {/* Name */}
+            <div className="flex flex-col leading-none gap-px">
+              <span className="gradient-text font-bold text-[15px] tracking-tight">
+                Huzaifa Nadeem
+              </span>
+              <span className="text-[9px] font-mono text-gray-400 dark:text-gray-500 tracking-[0.2em] uppercase group-hover:text-primary-400 transition-colors duration-300">
+                Portfolio
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}
