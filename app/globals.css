@@ -155,6 +155,71 @@
     @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
   }
 
+  /* ── Gradient text ──────────────────────────────────────────── */
+  .gradient-text {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientX 5s ease infinite;
+  }
+
+  /* ── Scroll-reveal ──────────────────────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-left.is-revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-right.is-revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Stagger delays for reveal animations */
+  .stagger-1 { transition-delay: 80ms; }
+  .stagger-2 { transition-delay: 160ms; }
+  .stagger-3 { transition-delay: 240ms; }
+  .stagger-4 { transition-delay: 320ms; }
+  .stagger-5 { transition-delay: 400ms; }
+  .stagger-6 { transition-delay: 480ms; }
+
+  /* ── Animated dot grid background ──────────────────────────── */
+  .dot-grid {
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  /* ── Profile picture ring ───────────────────────────────────── */
+  .profile-ring-gradient {
+    background: conic-gradient(
+      from 0deg,
+      #3b82f6,
+      #7c3aed,
+      #ec4899,
+      #f59e0b,
+      #3b82f6
+    );
+  }
+
   /* Admin sidebar link */
   .admin-link {
     @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium

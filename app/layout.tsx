@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
+import { ScrollAnimations } from '@/components/providers/ScrollAnimations'
 import { Toaster } from 'react-hot-toast'
 import '@/app/globals.css'
 
@@ -62,6 +63,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
+          <ScrollAnimations />
           {children}
           <Toaster
             position="bottom-right"

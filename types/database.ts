@@ -25,6 +25,7 @@ export interface Database {
           github:     string | null
           linkedin:   string | null
           resume_url: string | null
+          avatar_url: string | null
           updated_at: string
         }
         Insert: {
@@ -36,6 +37,7 @@ export interface Database {
           github?:     string | null
           linkedin?:   string | null
           resume_url?: string | null
+          avatar_url?: string | null
           updated_at?: string
         }
         Update: {
@@ -47,6 +49,7 @@ export interface Database {
           github?:     string | null
           linkedin?:   string | null
           resume_url?: string | null
+          avatar_url?: string | null
           updated_at?: string
         }
         Relationships: []

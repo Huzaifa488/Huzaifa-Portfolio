@@ -107,7 +107,7 @@ export function ContactSection({ contactEmail }: ContactSectionProps) {
                 <input
                   id="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder=""
                   className={cn('input-field', errors.name && 'border-red-400 focus:ring-red-400')}
                   {...register('name')}
                 />
@@ -122,7 +122,7 @@ export function ContactSection({ contactEmail }: ContactSectionProps) {
                 <input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder=""
                   className={cn('input-field', errors.email && 'border-red-400 focus:ring-red-400')}
                   {...register('email')}
                 />
